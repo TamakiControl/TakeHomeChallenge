@@ -5,6 +5,9 @@ import lombok.*;
 import java.util.Date;
 import java.util.List;
 
+/**
+ * Product transfer information for a period of time
+ */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

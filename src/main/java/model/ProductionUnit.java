@@ -5,6 +5,9 @@ import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import lombok.*;
 
+/**
+ * a node of Production network graph
+ */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -15,12 +18,20 @@ import lombok.*;
         property = "name")
 public class ProductionUnit {
 
+    /**
+     * Unique identifier
+     */
     private String name;
 
-    // ProductionContinuous, ProductionBatch, IngredientAddition, FinalProductSink, Resevorior
-    //@Enumerated(EnumType.STRING)
+    /**
+     * Type of production unit, defines tracing behavior
+     * Can be ProductionContinuous, ProductionBatch, IngredientAddition, FinalProductSink
+     */
     private ProductionUnitType unitType;
 
+    /**
+     * The amount of time in seconds that an input continues to contribute to the output after addition has stopped
+     */
     private double residenceTime;
 
 }

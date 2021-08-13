@@ -2,6 +2,9 @@ package model;
 
 import lombok.*;
 
+/**
+ * An edge of production network graph
+ */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -9,7 +12,6 @@ import lombok.*;
 @EqualsAndHashCode
 public class ProductionConnection {
 
-    // TODO: simplify JSON to use names only (need to connect back to production model)
     private ProductionUnit source;
 
     private ProductionUnit destination;
