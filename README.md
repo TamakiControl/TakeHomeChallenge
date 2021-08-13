@@ -1,6 +1,6 @@
 # Mini Track & Trace Analyzer
 ## Introduction
-One of the things customers are interested in analyzing is the flow of product through the factory. This is particularly useful for being able to trace
+One of the things customers are interested in analyzing is the flow of product through the factory. This is particularly useful for being able to trace 
 
 ![img.png](img.png)
 
@@ -9,13 +9,13 @@ The factory is represented as a graph where each node (`ProductionUnit`) is a pr
 #### Types of Production Units
 There are different types of production units which will need different ways of linking input materials to output materials. They are listed below along with information about how to treat them.
 1. IngredientAddition
-   Represents new materials being added into the system. Only has an output.
+   Represents new materials entering the system. Only has an output.
 2. ProductionContinuous
-   Represens a continuous production process. Each output movement will have a start date and end date indicating the start and end of product supply. The total amount of material supplied is totalized. Inputs are included after the residence time is passed.
+   Represents a continuous production process. Each output movement will have a start date and end date indicating the start and end of product supply. The total amount of material supplied is totalized. Inputs are included after the residence time is passed.
 3. ProductionBatch
    Represents a discrete production process. Each output movement has a start date and end date for when the batch started and ended.
 4. FinalProductSink
-   Represents completed products being removed from the system. Only has an input.
+   Represents completed products leaving from the system. Only has an input.
 
 ### Production Run `ProductionRun`
 Each production run contains product transfer information for some period of time that the plant ran for. These are typically about a day, but do not need to be a specific lenght of time. Each product movement is defined as a `ProductMovement`, which has its own start and end date
