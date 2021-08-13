@@ -1,0 +1,1 @@
+{"material":{"type":"Milk","code":"RMS1-210813"},"connection":{"source":{"name":"MilkSilo1","unitType":"ProductionContinuous","residenceTime":0.0},"destination":{"name":"MilkUF1","unitType":"ProductionContinuous","residenceTime":0.0}},"startDate":1628860894,"endDate":1628864494,"quantity":42.0}

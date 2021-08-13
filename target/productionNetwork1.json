@@ -1,0 +1,4 @@
+{"units":[{"name":"MilkSilo1","unitType":"ProductionContinuous","residenceTime":0.0},
+          {"name":"MilkUF1","unitType":"ProductionContinuous","residenceTime":0.0}],
+  "connections":[
+    {"source":"MilkSilo1","destination":"MilkUF1"}]}
