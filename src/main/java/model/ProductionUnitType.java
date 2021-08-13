@@ -8,6 +8,4 @@ public enum ProductionUnitType {
     IngredientAddition,
 
     FinalProductSink,
-
-    //Resevorior
 }

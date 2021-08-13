@@ -1,11 +1,10 @@
 # Mini Track & Trace Analyzer
 ## Introduction
-One of the things customers are interested in analyzing is the flow of product through the factory. This is particularly useful for being able to trace 
-
-![img.png](img.png)
+We are interested in analyzing is the flow of product through the factory. In particular, we want to be able trace which ingredients end being encorporated into the final product. The is going to be useful in the event of a product recall on one of the input ingredients. With this tool, we would be able to find all of the products that had ingredients that were effected by the recall in order to also recall those products.
 
 ### Production Model Graph `ProductionNetwork`
-The factory is represented as a graph where each node (`ProductionUnit`) is a production unit that performs some function in the production process. Each edge (`ProductionConnection`) represents a connection where one node could feed to another connection. The production network is static and represents the configuration of the factory. It is used to define the product flow throughout the plant.
+The factory is represented as a graph where each node (`ProductionUnit`) is a production unit that performs some function in the production process. Each edge (`ProductionConnection`) represents a connection where one node could feed to another connection. The production network is static and represents the configuration of the factory. It is used to define the product flow throughout the plant. Below is a highly professional diagram of the example production graph which is defined at `productionNetwork1.json`
+![img.png](img.png)
 #### Types of Production Units
 There are different types of production units which will need different ways of linking input materials to output materials. They are listed below along with information about how to treat them.
 1. IngredientAddition
@@ -18,11 +17,7 @@ There are different types of production units which will need different ways of 
    Represents completed products leaving from the system. Only has an input.
 
 ### Production Run `ProductionRun`
-Each production run contains product transfer information for some period of time that the plant ran for. These are typically about a day, but do not need to be a specific lenght of time. Each product movement is defined as a `ProductMovement`, which has its own start and end date
-Continuous: start, end, quantity
-Batch: start, end
-Edge
-Material
+Each production run contains product transfer information for some period of time that the plant ran for. These are typically about a day, but do not need to be a specific lenght of time. Each product movement is defined as a `ProductMovement`, which has its own start and end date and product quantity.
 
 ## The Task
 Given a `ProductionNetwork` and `ProductionRun` json import, for each final product in the run (the material that ended at a `FinalProductSink` node), determine which input materials ended up as a component for the final product (materials that come from an `IngredientAddition` node).
