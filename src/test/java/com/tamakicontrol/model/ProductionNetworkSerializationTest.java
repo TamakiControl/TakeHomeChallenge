@@ -16,17 +16,14 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class ProductionNetworkSerializationTest {
 
-    private String outputFilepath ="target/productionNetwork1.json";
+    private String outputFilepath ="target/testNetwork1.json";
     ObjectMapper objectMapper = new ObjectMapper();
-    ProductionMaterial milk = new ProductionMaterial("Milk", "RMS1-210813");
 
     ProductionUnit milkSilo = new ProductionUnit("MilkSilo1", ProductionUnitType.ProductionContinuous, 0.0);
     ProductionUnit milkUF = new ProductionUnit("MilkUF1", ProductionUnitType.ProductionContinuous, 0.0);
     ProductionConnection milkSiloToUF = new ProductionConnection(milkSilo, milkUF);
     ProductionNetwork productionNetwork = new ProductionNetwork(Arrays.asList(milkSilo, milkUF), Arrays.asList(milkSiloToUF));
 
-    ProductionMovement productionMovement = new ProductionMovement(milk,
-            milkSiloToUF, new Date(1628860894), new Date(1628864494), 42.0);
 
     @Before
     public void init() {
