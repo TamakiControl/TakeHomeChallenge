@@ -1,0 +1,192 @@
+{
+  "startDate": 1628985600,
+  "endDate": 1629201600,
+  "productionNetwork": {
+    "units": [
+      {
+        "name": "S1a",
+        "unitType": "IngredientAddition",
+        "residenceTime": 0.0
+      },
+      {
+        "name": "S2a",
+        "unitType": "IngredientAddition",
+        "residenceTime": 0.0
+      },
+      {
+        "name": "S1b",
+        "unitType": "IngredientAddition",
+        "residenceTime": 0.0
+      },
+      {
+        "name": "S2b",
+        "unitType": "IngredientAddition",
+        "residenceTime": 0.0
+      },
+      {
+        "name": "Mix1",
+        "unitType": "ProductionContinuous",
+        "residenceTime": 0.0
+      },
+      {
+        "name": "Delay1",
+        "unitType": "ProductionContinuous",
+        "residenceTime": 300.0
+      },
+      {
+        "name": "Split1",
+        "unitType": "ProductionBatch",
+        "residenceTime": 0.0
+      },
+      {
+        "name": "S3",
+        "unitType": "IngredientAddition",
+        "residenceTime": 0.0
+      },
+      {
+        "name": "Mix2a",
+        "unitType": "ProductionBatch",
+        "residenceTime": 0.0
+      },
+      {
+        "name": "Mix2b",
+        "unitType": "ProductionBatch",
+        "residenceTime": 0.0
+      },
+      {
+        "name": "D1",
+        "unitType": "FinalProductSink",
+        "residenceTime": 0.0
+      },
+      {
+        "name": "D2",
+        "unitType": "FinalProductSink",
+        "residenceTime": 0.0
+      }
+    ],
+    "connections": [
+      {
+        "source": "S1a",
+        "destination": "Mix1"
+      },
+      {
+        "source": "S2a",
+        "destination": "Mix1"
+      },
+      {
+        "source": "S1b",
+        "destination": "Mix1"
+      },
+      {
+        "source": "S2b",
+        "destination": "Mix1"
+      },
+      {
+        "source": "Mix1",
+        "destination": "Delay1"
+      },
+      {
+        "source": "Delay1",
+        "destination": "Split1"
+      },
+      {
+        "source": "S3",
+        "destination": "Mix2a"
+      },
+      {
+        "source": "S3",
+        "destination": "Mix2b"
+      },
+      {
+        "source": "Mix2a",
+        "destination": "D1"
+      },
+      {
+        "source": "Mix2b",
+        "destination": "D2"
+      }
+    ]
+  },
+  "productionMovementList": [
+    {"material":{"type":"s1","code":"S1a-210815"},"connection":{"source":"S1a","destination":"Mix1"},"startDate":1628985600,"endDate":1629118800,"quantity":1300.0},
+    {"material":{"type":"s1","code":"S1b-210815"},"connection":{"source":"S1b","destination":"Mix1"},"startDate":1629118800,"endDate":1629201600,"quantity":1100.0},
+    {"material":{"type":"s2","code":"S2a-210815"},"connection":{"source":"S2a","destination":"Mix1"},"startDate":1628985600,"endDate":1629111600,"quantity":1100.0},
+    {"material":{"type":"s2","code":"S2b-210815"},"connection":{"source":"S2b","destination":"Mix1"},"startDate":1629111600,"endDate":1629201600,"quantity":1300.0},
+    {"material":{"type":"mix1","code":"Mix-210815"},"connection":{"source":"Mix1","destination":"Delay1"},"startDate":1628985600,"endDate":1629201600,"quantity":4800.0},
+    {"material":{"type":"del1","code":"Del-210815"},"connection":{"source":"Delay1","destination":"Split1"},"startDate":1628985600,"endDate":1629201600,"quantity":4800.0},
+    {"material":{"type":"Line1Batch","code":"L1P-210815-01"},"connection":{"source":"Split1","destination":"Mix2a"},"startDate":1628985600,"endDate":1629079200,"quantity":1.0},
+    {"material":{"type":"Line1Batch","code":"L1P-210815-02"},"connection":{"source":"Split1","destination":"Mix2a"},"startDate":1629079200,"endDate":1629086400,"quantity":1.0},
+    {"material":{"type":"Line1Batch","code":"L1P-210815-03"},"connection":{"source":"Split1","destination":"Mix2a"},"startDate":1629086400,"endDate":1629093600,"quantity":1.0},
+    {"material":{"type":"Line1Batch","code":"L1P-210815-04"},"connection":{"source":"Split1","destination":"Mix2a"},"startDate":1629093600,"endDate":1629100800,"quantity":1.0},
+    {"material":{"type":"Line1Batch","code":"L1P-210815-05"},"connection":{"source":"Split1","destination":"Mix2a"},"startDate":1629100800,"endDate":1629108000,"quantity":1.0},
+    {"material":{"type":"Line1Batch","code":"L1P-210815-06"},"connection":{"source":"Split1","destination":"Mix2a"},"startDate":1629108000,"endDate":1629115200,"quantity":1.0},
+    {"material":{"type":"Line1Batch","code":"L1P-210815-07"},"connection":{"source":"Split1","destination":"Mix2a"},"startDate":1629115200,"endDate":1629122400,"quantity":1.0},
+    {"material":{"type":"Line1Batch","code":"L1P-210815-08"},"connection":{"source":"Split1","destination":"Mix2a"},"startDate":1629122400,"endDate":1629129600,"quantity":1.0},
+    {"material":{"type":"Line1Batch","code":"L1P-210815-09"},"connection":{"source":"Split1","destination":"Mix2a"},"startDate":1629129600,"endDate":1629136800,"quantity":1.0},
+    {"material":{"type":"Line1Batch","code":"L1P-210815-10"},"connection":{"source":"Split1","destination":"Mix2a"},"startDate":1629136800,"endDate":1629144000,"quantity":1.0},
+    {"material":{"type":"Line1Batch","code":"L1P-210815-11"},"connection":{"source":"Split1","destination":"Mix2a"},"startDate":1629144000,"endDate":1629151200,"quantity":1.0},
+    {"material":{"type":"Line1Batch","code":"L1P-210815-12"},"connection":{"source":"Split1","destination":"Mix2a"},"startDate":1629151200,"endDate":1629201600,"quantity":1.0},
+    {"material":{"type":"Line2Batch","code":"L2P-210815-01"},"connection":{"source":"Split1","destination":"Mix2b"},"startDate":1628985600,"endDate":1629079200,"quantity":1.0},
+    {"material":{"type":"Line2Batch","code":"L2P-210815-02"},"connection":{"source":"Split1","destination":"Mix2b"},"startDate":1629079200,"endDate":1629086400,"quantity":1.0},
+    {"material":{"type":"Line2Batch","code":"L2P-210815-03"},"connection":{"source":"Split1","destination":"Mix2b"},"startDate":1629086400,"endDate":1629093600,"quantity":1.0},
+    {"material":{"type":"Line2Batch","code":"L2P-210815-04"},"connection":{"source":"Split1","destination":"Mix2b"},"startDate":1629093600,"endDate":1629100800,"quantity":1.0},
+    {"material":{"type":"Line2Batch","code":"L2P-210815-05"},"connection":{"source":"Split1","destination":"Mix2b"},"startDate":1629100800,"endDate":1629108000,"quantity":1.0},
+    {"material":{"type":"Line2Batch","code":"L2P-210815-06"},"connection":{"source":"Split1","destination":"Mix2b"},"startDate":1629108000,"endDate":1629115200,"quantity":1.0},
+    {"material":{"type":"Line2Batch","code":"L2P-210815-07"},"connection":{"source":"Split1","destination":"Mix2b"},"startDate":1629115200,"endDate":1629122400,"quantity":1.0},
+    {"material":{"type":"Line2Batch","code":"L2P-210815-08"},"connection":{"source":"Split1","destination":"Mix2b"},"startDate":1629122400,"endDate":1629129600,"quantity":1.0},
+    {"material":{"type":"Line2Batch","code":"L2P-210815-09"},"connection":{"source":"Split1","destination":"Mix2b"},"startDate":1629129600,"endDate":1629136800,"quantity":1.0},
+    {"material":{"type":"Line2Batch","code":"L2P-210815-10"},"connection":{"source":"Split1","destination":"Mix2b"},"startDate":1629136800,"endDate":1629144000,"quantity":1.0},
+    {"material":{"type":"Line2Batch","code":"L2P-210815-11"},"connection":{"source":"Split1","destination":"Mix2b"},"startDate":1629144000,"endDate":1629151200,"quantity":1.0},
+    {"material":{"type":"Line2Batch","code":"L2P-210815-12"},"connection":{"source":"Split1","destination":"Mix2b"},"startDate":1629151200,"endDate":1629201600,"quantity":1.0},
+
+    {"material":{"type":"S3Add","code":"S3A-210815-01"},"connection":{"source":"S3","destination":"Mix2a"},"startDate":1628985600,"endDate":1629079200,"quantity":10.0},
+    {"material":{"type":"S3Add","code":"S3A-210815-02"},"connection":{"source":"S3","destination":"Mix2a"},"startDate":1629079200,"endDate":1629086400,"quantity":10.0},
+    {"material":{"type":"S3Add","code":"S3A-210815-03"},"connection":{"source":"S3","destination":"Mix2a"},"startDate":1629086400,"endDate":1629093600,"quantity":10.0},
+    {"material":{"type":"S3Add","code":"S3A-210815-04"},"connection":{"source":"S3","destination":"Mix2a"},"startDate":1629093600,"endDate":1629100800,"quantity":10.0},
+    {"material":{"type":"S3Add","code":"S3A-210815-05"},"connection":{"source":"S3","destination":"Mix2a"},"startDate":1629100800,"endDate":1629108000,"quantity":10.0},
+    {"material":{"type":"S3Add","code":"S3A-210815-06"},"connection":{"source":"S3","destination":"Mix2a"},"startDate":1629108000,"endDate":1629115200,"quantity":10.0},
+    {"material":{"type":"S3Add","code":"S3A-210815-07"},"connection":{"source":"S3","destination":"Mix2a"},"startDate":1629115200,"endDate":1629122400,"quantity":10.0},
+    {"material":{"type":"S3Add","code":"S3A-210815-08"},"connection":{"source":"S3","destination":"Mix2a"},"startDate":1629122400,"endDate":1629129600,"quantity":10.0},
+    {"material":{"type":"S3Add","code":"S3A-210815-09"},"connection":{"source":"S3","destination":"Mix2a"},"startDate":1629129600,"endDate":1629136800,"quantity":10.0},
+    {"material":{"type":"S3Add","code":"S3A-210815-10"},"connection":{"source":"S3","destination":"Mix2a"},"startDate":1629136800,"endDate":1629144000,"quantity":10.0},
+    {"material":{"type":"S3Add","code":"S3A-210815-11"},"connection":{"source":"S3","destination":"Mix2a"},"startDate":1629144000,"endDate":1629151200,"quantity":10.0},
+    {"material":{"type":"S3Add","code":"S3A-210815-12"},"connection":{"source":"S3","destination":"Mix2a"},"startDate":1629151200,"endDate":1629201600,"quantity":10.0},
+    {"material":{"type":"S3Add","code":"S3A-210815-01"},"connection":{"source":"S3","destination":"Mix2b"},"startDate":1628985600,"endDate":1629079200,"quantity":10.0},
+    {"material":{"type":"S3Add","code":"S3A-210815-02"},"connection":{"source":"S3","destination":"Mix2b"},"startDate":1629079200,"endDate":1629086400,"quantity":10.0},
+    {"material":{"type":"S3Add","code":"S3A-210815-03"},"connection":{"source":"S3","destination":"Mix2b"},"startDate":1629086400,"endDate":1629093600,"quantity":10.0},
+    {"material":{"type":"S3Add","code":"S3A-210815-04"},"connection":{"source":"S3","destination":"Mix2b"},"startDate":1629093600,"endDate":1629100800,"quantity":10.0},
+    {"material":{"type":"S3Add","code":"S3A-210815-05"},"connection":{"source":"S3","destination":"Mix2b"},"startDate":1629100800,"endDate":1629108000,"quantity":10.0},
+    {"material":{"type":"S3Add","code":"S3A-210815-06"},"connection":{"source":"S3","destination":"Mix2b"},"startDate":1629108000,"endDate":1629115200,"quantity":10.0},
+    {"material":{"type":"S3Add","code":"S3A-210815-07"},"connection":{"source":"S3","destination":"Mix2b"},"startDate":1629115200,"endDate":1629122400,"quantity":10.0},
+    {"material":{"type":"S3Add","code":"S3A-210815-08"},"connection":{"source":"S3","destination":"Mix2b"},"startDate":1629122400,"endDate":1629129600,"quantity":10.0},
+    {"material":{"type":"S3Add","code":"S3A-210815-09"},"connection":{"source":"S3","destination":"Mix2b"},"startDate":1629129600,"endDate":1629136800,"quantity":10.0},
+    {"material":{"type":"S3Add","code":"S3A-210815-10"},"connection":{"source":"S3","destination":"Mix2b"},"startDate":1629136800,"endDate":1629144000,"quantity":10.0},
+    {"material":{"type":"S3Add","code":"S3A-210815-11"},"connection":{"source":"S3","destination":"Mix2b"},"startDate":1629144000,"endDate":1629151200,"quantity":10.0},
+    {"material":{"type":"S3Add","code":"S3A-210815-12"},"connection":{"source":"S3","destination":"Mix2b"},"startDate":1629151200,"endDate":1629201600,"quantity":10.0},
+
+    {"material":{"type":"Line1Prod","code":"L1F-210815-01"},"connection":{"source":"Mix2a","destination":"D1"},"startDate":1628985600,"endDate":1629079200,"quantity":1.0},
+    {"material":{"type":"Line1Prod","code":"L1F-210815-02"},"connection":{"source":"Mix2a","destination":"D1"},"startDate":1629079200,"endDate":1629086400,"quantity":1.0},
+    {"material":{"type":"Line1Prod","code":"L1F-210815-03"},"connection":{"source":"Mix2a","destination":"D1"},"startDate":1629086400,"endDate":1629093600,"quantity":1.0},
+    {"material":{"type":"Line1Prod","code":"L1F-210815-04"},"connection":{"source":"Mix2a","destination":"D1"},"startDate":1629093600,"endDate":1629100800,"quantity":1.0},
+    {"material":{"type":"Line1Prod","code":"L1F-210815-05"},"connection":{"source":"Mix2a","destination":"D1"},"startDate":1629100800,"endDate":1629108000,"quantity":1.0},
+    {"material":{"type":"Line1Prod","code":"L1F-210815-06"},"connection":{"source":"Mix2a","destination":"D1"},"startDate":1629108000,"endDate":1629115200,"quantity":1.0},
+    {"material":{"type":"Line1Prod","code":"L1F-210815-07"},"connection":{"source":"Mix2a","destination":"D1"},"startDate":1629115200,"endDate":1629122400,"quantity":1.0},
+    {"material":{"type":"Line1Prod","code":"L1F-210815-08"},"connection":{"source":"Mix2a","destination":"D1"},"startDate":1629122400,"endDate":1629129600,"quantity":1.0},
+    {"material":{"type":"Line1Prod","code":"L1F-210815-09"},"connection":{"source":"Mix2a","destination":"D1"},"startDate":1629129600,"endDate":1629136800,"quantity":1.0},
+    {"material":{"type":"Line1Prod","code":"L1F-210815-10"},"connection":{"source":"Mix2a","destination":"D1"},"startDate":1629136800,"endDate":1629144000,"quantity":1.0},
+    {"material":{"type":"Line1Prod","code":"L1F-210815-11"},"connection":{"source":"Mix2a","destination":"D1"},"startDate":1629144000,"endDate":1629151200,"quantity":1.0},
+    {"material":{"type":"Line1Prod","code":"L1F-210815-12"},"connection":{"source":"Mix2a","destination":"D1"},"startDate":1629151200,"endDate":1629201600,"quantity":1.0},
+    {"material":{"type":"Line2Prod","code":"L2F-210815-01"},"connection":{"source":"Mix2b","destination":"D2"},"startDate":1628985600,"endDate":1629079200,"quantity":1.0},
+    {"material":{"type":"Line2Prod","code":"L2F-210815-02"},"connection":{"source":"Mix2b","destination":"D2"},"startDate":1629079200,"endDate":1629086400,"quantity":1.0},
+    {"material":{"type":"Line2Prod","code":"L2F-210815-03"},"connection":{"source":"Mix2b","destination":"D2"},"startDate":1629086400,"endDate":1629093600,"quantity":1.0},
+    {"material":{"type":"Line2Prod","code":"L2F-210815-04"},"connection":{"source":"Mix2b","destination":"D2"},"startDate":1629093600,"endDate":1629100800,"quantity":1.0},
+    {"material":{"type":"Line2Prod","code":"L2F-210815-05"},"connection":{"source":"Mix2b","destination":"D2"},"startDate":1629100800,"endDate":1629108000,"quantity":1.0},
+    {"material":{"type":"Line2Prod","code":"L2F-210815-06"},"connection":{"source":"Mix2b","destination":"D2"},"startDate":1629108000,"endDate":1629115200,"quantity":1.0},
+    {"material":{"type":"Line2Prod","code":"L2F-210815-07"},"connection":{"source":"Mix2b","destination":"D2"},"startDate":1629115200,"endDate":1629122400,"quantity":1.0},
+    {"material":{"type":"Line2Prod","code":"L2F-210815-08"},"connection":{"source":"Mix2b","destination":"D2"},"startDate":1629122400,"endDate":1629129600,"quantity":1.0},
+    {"material":{"type":"Line2Prod","code":"L2F-210815-09"},"connection":{"source":"Mix2b","destination":"D2"},"startDate":1629129600,"endDate":1629136800,"quantity":1.0},
+    {"material":{"type":"Line2Prod","code":"L2F-210815-10"},"connection":{"source":"Mix2b","destination":"D2"},"startDate":1629136800,"endDate":1629144000,"quantity":1.0},
+    {"material":{"type":"Line2Prod","code":"L2F-210815-11"},"connection":{"source":"Mix2b","destination":"D2"},"startDate":1629144000,"endDate":1629151200,"quantity":1.0},
+    {"material":{"type":"Line2Prod","code":"L2F-210815-12"},"connection":{"source":"Mix2b","destination":"D2"},"startDate":1629151200,"endDate":1629201600,"quantity":1.0}
+  ]
+}
