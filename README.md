@@ -26,5 +26,8 @@ Each production run contains product transfer information for some period of tim
 ## The Task
 Given a `ProductionNetwork` and `ProductionRun` json import, for each final product in the run (the material that ended at a `FinalProductSink` node), determine which input materials ended up as a component for the final product (materials that come from an `IngredientAddition` node).
 
+### Submission
+Upon completion, we will review your submission and get back to you with feedback. We are particularly interested in how you tested your solution and recommend including unit tests to verify your code's functionality.
+
 Let me know if you have any questions or clarifications.
 Good luck! I look forward to seeing what you come up with!
