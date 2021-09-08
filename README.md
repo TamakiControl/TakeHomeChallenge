@@ -16,6 +16,10 @@ There are different types of production units which will need different ways of 
 4. FinalProductSink
    Represents completed products leaving from the system. Only has an input.
 
+#### Residence Time
+Each unit optionally has a residence time, which is the amount of time it takes for previous inputs to clear from the system. For many continuous liquid based processes, the new input will mix with what is currently in the system, resulting in a fuzzy border between the two streams. This is loosely estimated in our model with a rough residence time estimation. So what S1a switches to S1b, both inputs will end up contributing until the residence time is over. Residence time is additive. So for each subsequent unit with a residence time, the input product will continue to remain in the system and become diluted for that longer period of time.
+
+
 ### Production Run `ProductionRun`
 Each production run contains product transfer information for some period of time that the plant ran for. These are typically about a day, but do not need to be a specific lenght of time. Each product movement is defined as a `ProductMovement`, which has its own start and end date and product quantity.
 
