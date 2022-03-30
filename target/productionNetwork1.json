@@ -18,6 +18,8 @@
     {"source":"S2b","destination":"Mix1"},
     {"source":"Mix1","destination":"Delay1"},
     {"source":"Delay1","destination":"Split1"},
+    {"source": "Split1", "destination": "Mix2a"},
+    {"source": "Split1", "destination": "Mix2b"},
     {"source":"S3","destination":"Mix2a"},
     {"source":"S3","destination":"Mix2b"},
     {"source":"Mix2a","destination":"D1"},

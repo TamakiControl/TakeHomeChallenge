@@ -90,6 +90,14 @@
         "destination": "Split1"
       },
       {
+        "source": "Split1",
+        "destination": "Mix2a"
+      },
+      {
+        "source": "Split1",
+        "destination": "Mix2b"
+      },
+      {
         "source": "S3",
         "destination": "Mix2a"
       },
