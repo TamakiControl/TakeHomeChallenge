@@ -16,11 +16,18 @@ There are different types of production units which will need different ways of 
 4. FinalProductSink
    Represents completed products leaving from the system. Only has an input.
 
+#### Residence Time
+Each unit optionally has a residence time, which is the amount of time it takes for previous inputs to clear from the system. For many continuous liquid based processes, the new input will mix with what is currently in the system, resulting in a fuzzy border between the two streams. This is loosely estimated in our model with a rough residence time estimation. So what S1a switches to S1b, both inputs will end up contributing until the residence time is over. Residence time is additive. So for each subsequent unit with a residence time, the input product will continue to remain in the system and become diluted for that longer period of time.
+
+
 ### Production Run `ProductionRun`
 Each production run contains product transfer information for some period of time that the plant ran for. These are typically about a day, but do not need to be a specific lenght of time. Each product movement is defined as a `ProductMovement`, which has its own start and end date and product quantity.
 
 ## The Task
 Given a `ProductionNetwork` and `ProductionRun` json import, for each final product in the run (the material that ended at a `FinalProductSink` node), determine which input materials ended up as a component for the final product (materials that come from an `IngredientAddition` node).
+
+### Submission
+Upon completion, we will review your submission and get back to you with feedback. We are particularly interested in how you tested your solution and recommend including unit tests to verify your code's functionality.
 
 Let me know if you have any questions or clarifications.
 Good luck! I look forward to seeing what you come up with!
